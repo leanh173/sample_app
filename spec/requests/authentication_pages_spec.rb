@@ -34,6 +34,7 @@ describe "AuthenticationPages" do
   		end
   		it {should have_title (user.name)}
   		it {should have_link('Profile', 	herf: user_path(user)) }
+  		it {should have_link('Settings', herf: edit_user_path(user) )}
   		it {should have_link('Sign out', 	herf: signout_path) }
   		it {should_not have_link('Sign in'),herf: signin_path}
   	end
