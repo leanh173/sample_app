@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+	skip_load_and_authorize_resource only: [:new, :create, :destroy]
+	
 	def new
 	end
 
