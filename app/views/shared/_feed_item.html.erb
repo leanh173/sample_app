@@ -3,6 +3,15 @@
   <span class="user">
     <%= link_to feed_item.user.name, feed_item.user %>
   </span>
+  <br />
+
+  title
+  <span class="title">
+  <%= link_to sanitize(feed_item.title), feed_item %>
+  </span>
+  <br />
+
+  content
   <span class="content">
   <%= link_to sanitize(feed_item.content), feed_item %>
   </span>

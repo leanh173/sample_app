@@ -15,14 +15,9 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 # Use sqlite3 as the database for Active Record
-group:development, :test do
-  gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
-end
 group :test do 
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
-  gem 'factory_girl_rails', '4.2.0'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
@@ -52,6 +47,9 @@ group :production do
   gem 'rails_12factor' , '0.0.2'
 
 end
+gem 'haml'
+gem 'friendly_id', '~> 5.1.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -64,3 +62,21 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :development, :test do
+  gem 'sqlite3'
+  gem "pry-rails"
+  gem "pry"
+  gem "rspec-rails"
+  gem "factory_girl_rails"
+  gem "better_errors"
+  gem "binding_of_caller"
+  gem "delorean"
+  gem "dotenv-deployment"
+end
+
+group :test do
+  gem "guard"
+  gem "guard-bundler"
+  gem "guard-rspec"
+  gem "guard-rubocop"
+end

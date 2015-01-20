@@ -10,9 +10,9 @@ class Ability
     if user.admin?
       can :manage, :all
       can :crud, Micropost
+      can :crud, User
       # cannot :destroy, :micropost
     elsif !user.admin?
-      binding.pry
       can :create, Micropost
       can :read, Micropost, :user_id => user.id
       cannot :destroy, Micropost

@@ -1,7 +1,8 @@
 class MicropostsController < ApplicationController
   before_action :signed_in_user, only: [:create, :destroy]
   before_action :correct_user, only: :destroy 
-  
+  skip_load_and_authorize_resource only: :show
+
   def new
     @micropost = Micropost.new
   end
@@ -13,7 +14,8 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(micropost_params)
     if @micropost.save
       flash[:success] ="Micropost created!"
-    redirect_to root_url
+      @micropost.to_param
+      redirect_to @micropost
     else 
       @feed_iemts =[]
       render 'static_pages/home'
@@ -21,7 +23,8 @@ class MicropostsController < ApplicationController
   end
   
   def show
-    @micropost = Micropost.find params[:id]
+    @micropost = Micropost.friendly.find params[:id]
+    authorize! :show, @micropost
   end
 
   def destroy
@@ -31,7 +34,7 @@ class MicropostsController < ApplicationController
 
   private 
   def micropost_params
-    params.require(:micropost).permit(:content)
+    params.require(:micropost).permit(:content, :title)
   end
 
   def correct_user
