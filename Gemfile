@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'capistrano'
+gem 'unicorn'
+gem 'dotenv-rails'
 gem 'rails', '4.1.4'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets' , '2.11.0'
@@ -44,7 +47,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 group :production do
-  gem 'pg' , '0.15.1'
+  gem 'sqlite3'
   gem 'rails_12factor' , '0.0.2'
 
 end
