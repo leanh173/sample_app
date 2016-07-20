@@ -12,7 +12,7 @@ set :repo_url, 'https://github.com/leanh173/sample_app.git'
 
 # Default value for :scm is :git
  set :scm, :git
-
+ set :ssh_options, {:forward_agent => true}
 # Default value for :format is :airbrussh.
  set :format, :airbrussh
 
@@ -45,5 +45,14 @@ namespace :deploy do
       # end
     end
   end
+
+  desc "Restart application"
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "service unicorn_sample_app restart"
+    end
+  end
+  after :publishing, :restart
+
 
 end

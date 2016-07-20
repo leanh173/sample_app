@@ -1,0 +1,25 @@
+I, [2016-07-12T08:03:59.494571 #3394]  INFO -- : Refreshing Gem list
+I, [2016-07-12T08:04:00.604414 #3394]  INFO -- : listening on addr=/home/deploy/sample_app/shared/sockets/unicorn.sock fd=8
+I, [2016-07-12T08:04:00.604514 #3394]  INFO -- : worker=0 spawning...
+I, [2016-07-12T08:04:00.605402 #3394]  INFO -- : worker=1 spawning...
+I, [2016-07-12T08:04:00.606095 #3394]  INFO -- : master process ready
+I, [2016-07-12T08:04:00.610306 #3397]  INFO -- : worker=0 spawned pid=3397
+I, [2016-07-12T08:04:00.610414 #3397]  INFO -- : worker=0 ready
+I, [2016-07-12T08:04:00.611016 #3399]  INFO -- : worker=1 spawned pid=3399
+I, [2016-07-12T08:04:00.611117 #3399]  INFO -- : worker=1 ready
+I, [2016-07-12T08:10:10.573560 #3394]  INFO -- : reaped #<Process::Status: pid 3397 exit 0> worker=0
+I, [2016-07-12T08:10:10.573651 #3394]  INFO -- : reaped #<Process::Status: pid 3399 exit 0> worker=1
+I, [2016-07-12T08:10:10.573705 #3394]  INFO -- : master complete
+I, [2016-07-12T08:10:27.238604 #4240]  INFO -- : Refreshing Gem list
+I, [2016-07-12T08:10:28.364549 #4240]  INFO -- : unlinking existing socket=/home/deploy/sample_app/shared/sockets/unicorn.sock
+I, [2016-07-12T08:10:28.364681 #4240]  INFO -- : listening on addr=/home/deploy/sample_app/shared/sockets/unicorn.sock fd=8
+I, [2016-07-12T08:10:28.364760 #4240]  INFO -- : worker=0 spawning...
+I, [2016-07-12T08:10:28.365677 #4240]  INFO -- : worker=1 spawning...
+I, [2016-07-12T08:10:28.366237 #4240]  INFO -- : master process ready
+I, [2016-07-12T08:10:28.373104 #4243]  INFO -- : worker=0 spawned pid=4243
+I, [2016-07-12T08:10:28.373262 #4243]  INFO -- : worker=0 ready
+I, [2016-07-12T08:10:28.373846 #4245]  INFO -- : worker=1 spawned pid=4245
+I, [2016-07-12T08:10:28.373952 #4245]  INFO -- : worker=1 ready
+I, [2016-07-13T07:05:51.181430 #4240]  INFO -- : reaped #<Process::Status: pid 4243 exit 0> worker=0
+I, [2016-07-13T07:05:51.181519 #4240]  INFO -- : reaped #<Process::Status: pid 4245 exit 0> worker=1
+I, [2016-07-13T07:05:51.181574 #4240]  INFO -- : master complete
